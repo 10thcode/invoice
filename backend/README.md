@@ -13,6 +13,10 @@ A simple Flask application to manage invoices through an API
 
 - **[`validator.py`](https://github.com/10thcode/invoice/blob/development/backend/validator.py)**: Contiains the Auth0 JWT bearer token validation logic.
 
+- **[`utils.py`](https://github.com/10thcode/invoice/blob/development/backend/Containerfile)**: Contiains utility functions.
+
+- **[`Containerfile`](https://github.com/10thcode/invoice/blob/development/backend/Containerfile)**: A Containerfile to build a container image.
+
 - **[`api/`](https://github.com/10thcode/invoice/tree/development/backend/api)**: Contains versioned API routes.
 
 ## Setup
