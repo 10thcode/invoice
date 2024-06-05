@@ -1,6 +1,7 @@
 """
 Handle HTTP requests for all api endpoints
 """
+from auth import require_auth
 from flask import Blueprint, request, jsonify, current_app
 from bson.objectid import ObjectId
 from bson.json_util import dumps
@@ -12,6 +13,7 @@ blueprint = Blueprint('blueprint', __name__)
 
 
 @blueprint.route("/<id>", methods=["GET", "PUT", "DELETE"])
+@require_auth(None)
 def invoice(id):
     """
     Handel HTTP requests for /<id> api endpoint
@@ -49,6 +51,7 @@ def invoice(id):
 
 
 @blueprint.route("/", methods=["GET", "POST"])
+@require_auth(None)
 def invoices():
     """
     Handle HTTP requests for api/v1/invoices/ endpoint.
