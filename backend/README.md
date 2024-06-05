@@ -9,15 +9,18 @@ A simple Flask application to manage invoices through an API
 
 - **[`requirements.txt`](https://github.com/10thcode/invoice/blob/development/backend/requirement.txt)**: Lists of all the dependencies required by the project.
 
+- **[`auth.py`](https://github.com/10thcode/invoice/blob/development/backend/auth.py)**: Defines a decorator to protect private api enpoints.
+
+- **[`validator.py`](https://github.com/10thcode/invoice/blob/development/backend/validator.py)**: Contiains the Auth0 JWT bearer token validation logic.
+
 - **[`api/`](https://github.com/10thcode/invoice/tree/development/backend/api)**: Contains versioned API routes.
 
 ## Setup
 ### Prerequisites
 
 - [Python 3.x](https://www.python.org/)
-- [Flask](https://pypi.org/project/Flask/)
-- [MongoDB](https://www.mongodb.com/)
-- [Pymongo](https://pypi.org/project/pymongo/)
+- [MongoDB Atlas Database](https://www.mongodb.com/products/platform/atlas-database)
+- [Auth0 API](https://auth0.com/docs/get-started/auth0-overview/set-up-apis)
 
 ### Installation
 
@@ -38,9 +41,11 @@ A simple Flask application to manage invoices through an API
     pip install -r requirements.txt
     ```
 
-4. Create an environment variable containing your MongoDB URI:
+4. Create an environment variables containing your MongoDB Atlas Database Cluster URI, Auth0 Tenant Domain and Auth0 API Application Identifier:
     ```bash
     export MONGO_URI=<your_mongodb_uri>
+    export AUTH0_DOMAIN=<your_auth0_tenant_domain>
+    export AUTH0_API_IDENTIFIER=<your_auth0_api_identifier>
     ```
 
 ### Running the Application
