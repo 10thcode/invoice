@@ -29,7 +29,7 @@ def invoice(id):
 
     if request.method == "GET":
         invoice_document = invoice_collection.find_one(
-                {"_id": ObjectId(id), "user_id": user_id}
+                {"id": id, "user_id": user_id}
         )
         if invoice_document:
             return jsonify(loads(dumps(invoice_document))), 200
@@ -38,9 +38,8 @@ def invoice(id):
 
     if request.method == "PUT":
         data = request.get_json()
-        data["modified_at"] = datetime.now().isoformat()
         result = invoice_collection.update_one(
-                {"_id": ObjectId(id), "user_id": user_id},
+                {"id": id, "user_id": user_id},
                 {"$set": data}
         )
         if result.matched_count:
@@ -50,7 +49,7 @@ def invoice(id):
 
     if request.method == "DELETE":
         result = invoice_collection.delete_one(
-                {"_id": ObjectId(id), "user_id": user_id}
+                {"id": id , "user_id": user_id}
         )
         if result.deleted_count:
             return jsonify({"status": "Success"}), 200
@@ -75,8 +74,6 @@ def invoices():
 
     if request.method == "POST":
         data = request.get_json()
-        data["created_at"] = datetime.now().isoformat()
-        data["modified_at"] = datetime.now().isoformat()
         data["user_id"] = user_id
         result = invoice_collection.insert_one(data)
         return jsonify({"id": str(result.inserted_id)}), 201
