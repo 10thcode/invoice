@@ -1,29 +1,66 @@
-# frontend
+# Frontend SPA
 
-This template should help get you started developing with Vue 3 in Vite.
+A simple frontend single page application to create and manage invoices.
 
-## Recommended IDE Setup
+## Table of Contents
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Configuration](#configuration)
+- [Scripts](#scripts)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Customize configuration
+## Installation
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+### Prerequisites
 
-## Project Setup
+- Node.js (version v22.2.0)
+- npm (version 10.7.0)
 
-```sh
+### Installing
+```bash
+# Clone the repository
+git clone https://github.com/10thcode/invoice.git
+
+# Navigate into the project directory
+cd invoice/frontend
+
+# Install dependencies
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Start the development server
 npm run dev
 ```
 
-### Compile and Minify for Production
+## Features
+- Simple and intuitive user interface
+- Optimized for mobile
+- Support PDF download
 
-```sh
+## Configuration
+```bash
+REACT_APP_API_KEY=yourapikey
+```
+
+## Scripts
+```bash
+# Start the development server
+npm run serve
+
+# Build the project for production
 npm run build
 ```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a pull request
+
+## License
+
+This project is licensed under the GPL-3.0 License - see the LICENSE file for details.
