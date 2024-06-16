@@ -46,3 +46,7 @@ def audience():
     Get Auth0 API audience url
     """
     return environ.get("AUTH0_AUDIENCE"), 200
+
+
+if __name__ == "__main__":
+    app.run()
