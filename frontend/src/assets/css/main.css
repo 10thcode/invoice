@@ -1,0 +1,18 @@
+@import './base.css';
+
+body {
+  color: var(--primary);
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+.info {
+  text-align: center;
+  color: var(--faded-text);
+  font-weight: 400;
+}
+
+.none {
+  background: none;
+  color: var(--accent);
+}
