@@ -38,6 +38,7 @@ def invoice(id):
 
     if request.method == "PUT":
         data = request.get_json()
+        del data["_id"]
         result = invoice_collection.update_one(
                 {"id": id, "user_id": user_id},
                 {"$set": data}
