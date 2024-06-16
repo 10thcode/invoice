@@ -27,8 +27,8 @@ ensure data security.
 ## Setup Instructions
 ### Backend Setup
 
-Read the backend (documentation)[https://github.com/10thcode/invoice/tree/development/backend#readme] to get started.
+Read the backend (documentation) [https://github.com/10thcode/invoice/tree/development/backend#readme] to get started.
 
 ### Frontend Setup
 
-Read the frontend (documentation)[https://github.com/10thcode/invoice/tree/development/frontend#readme] to get started.
+Read the frontend (documentation) [https://github.com/10thcode/invoice/tree/development/frontend#readme] to get started.
