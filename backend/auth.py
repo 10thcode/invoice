@@ -13,7 +13,7 @@ from validator import Auth0JWTBearerTokenValidator
 require_auth = ResourceProtector()
 
 domain = environ.get("AUTH0_DOMAIN")
-audience = environ.get("AUTH0_API_IDENTIFIER")
+audience = environ.get("AUTH0_AUDIENCE")
 validator = Auth0JWTBearerTokenValidator(domain, audience)
 
 require_auth.register_token_validator(validator)
