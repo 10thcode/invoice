@@ -49,7 +49,7 @@ A simple Flask application to manage invoices through an API
     ```bash
     export MONGO_URI=<your_mongodb_uri>
     export AUTH0_DOMAIN=<your_auth0_tenant_domain>
-    export AUTH0_API_IDENTIFIER=<your_auth0_api_identifier>
+    export AUTH0_AUDIENCE=<your_auth0_api_identifier>
     ```
 
 ### Running the Application
