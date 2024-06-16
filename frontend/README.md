@@ -41,13 +41,14 @@ npm run dev
 
 ## Configuration
 ```bash
-REACT_APP_API_KEY=yourapikey
+# .env
+VITE_API_URL=your_api_url
 ```
 
 ## Scripts
 ```bash
 # Start the development server
-npm run serve
+npm run dev
 
 # Build the project for production
 npm run build
