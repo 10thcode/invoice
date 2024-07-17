@@ -43,6 +43,9 @@ npm run dev
 ```bash
 # .env
 VITE_API_URL=your_api_url
+VITE_AUTH0_DOMAIN=your_auth0_domain
+VITE_AUTH0_CLIENT_ID=your_auth0_client_id
+VITE_AUTH0_AUDIENCE=your_auth0_audience
 ```
 
 ## Scripts
