@@ -30,7 +30,7 @@
   const invoices = ref(allInvoices)
 
   watch(isAuthenticated, async (newValue) => {
-    if (isAuthenticated.value) {
+    if (await isAuthenticated.value) {
       isLoading.value = true;
       try {
         const token = await getAccessTokenSilently()
